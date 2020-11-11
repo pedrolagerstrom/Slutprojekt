@@ -1,0 +1,42 @@
+﻿@using Webb_booking.Models;
+@model List<Bird>
+
+
+<h1>Lista av fåglar</h1>
+
+<p>
+    <a asp-action="Create">Lägg till en ny fågel</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Art
+            </th>
+            <th>
+                Namn
+            </th>
+            <th>
+                Pris/dag
+            </th>
+            <th>
+                
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bird in Model)
+        {
+        <tr>
+            <td>@bird.Species</td>
+            <td>@bird.Name</td>
+            <td>@bird.Price</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@bird.Id">Ändra</a>
+                <a asp-action="Delete" asp-route-id="@bird.Id">Ta bort</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

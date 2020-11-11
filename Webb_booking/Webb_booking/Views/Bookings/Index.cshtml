@@ -1,0 +1,44 @@
+﻿@model List<Booking>
+
+<h1>Bokade fåglar</h1>
+
+<p>
+    <a asp-action="Create">Skapa en ny bokning</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Namn
+            </th>
+            <th>
+                Fågel
+            </th>
+            <th>
+                Från
+            </th>
+            <th>
+                Till
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in Model)
+        {
+            <tr>
+                <td>@booking.Booker</td>
+                <td>@booking.BirdName</td>
+                <td>@booking.From</td>
+                <td>@booking.To</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@booking.Id">Ändra</a>
+                    <a asp-action="Delete" asp-route-id="@booking.Id">Ta bort</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

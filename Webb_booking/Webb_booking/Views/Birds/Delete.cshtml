@@ -1,0 +1,36 @@
+﻿@model Bird;
+
+<h1>Ta bort en fågel</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Delete" method="post">
+            <div>
+                <input hidden class="form-control" asp-for="Id" />
+            </div>
+            <div class="form-group">
+                <label class="control-lable">Art</label>
+                <input disabled class="form-control" asp-for="Species" />                
+            </div>
+            <div class="form-group">
+                <label class="control-lable">Namn</label>
+                <input disabled class="form-control" asp-for="Name" />                
+            </div>
+            <div class="form-group">
+                <label class="control-lable">Pris</label>
+                <input disabled class="form-control" asp-for="Price" />               
+            </div>
+            <div>
+                <input class="btn btn-danger" type="submit" value="Ta bort" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Tillbaka till listan med fåglar</a>
+</div>
+
+@section Scripts{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial.cshtml"); }
+}
