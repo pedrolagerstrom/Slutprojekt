@@ -4,25 +4,28 @@
 
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create" method="post">
-            <input hidden asp-for="Booking.Id" />
+        <form asp-action="Create" method="post">            
             <div class"form-group">
                 <label class="control-lable">Ditt namn</label>
                 <input class="form-control" asp-for="Booking.Booker" />
+                <span asp-validation-for="Booking.Booker" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label class="control-lable">Fågel</label>
                 <select class="form-control" asp-for="Booking.BirdId" asp-items="@(new SelectList(Model.Birds, "Id", "Name"))">
                     <option>Välj fågel</option>
                 </select>
+                <span asp-validation-for="Booking.BirdId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label class="control-label">Från</label>
                 <input class="form-control" asp-for="Booking.From" />
+                <span asp-validation-for="Booking.From" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label class="control-label">Till</label>
                 <input class="form-control" asp-for="Booking.To" />
+                <span asp-validation-for="Booking.To" class="text-danger"></span>
             </div>
             <div>
                 <input class="btn btn-primary" type="submit" value="Skapa" />
