@@ -34,3 +34,7 @@
 <div>
     <a asp-action="Index">Tillbaka till listan</a>
 </div>
+
+@section Scripts{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial.cshtml"); }
+}

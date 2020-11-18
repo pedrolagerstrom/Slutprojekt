@@ -15,6 +15,8 @@ namespace Webb_booking.Models
         [Required]
         [StringLength(30)]
         public string Booker { get; set; }
+
+        [Required]
         public Guid BirdId { get; set; }
 
         [Required]

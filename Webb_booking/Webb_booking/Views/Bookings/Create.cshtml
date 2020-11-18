@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create" method="post">            
+        <form asp-action="Create" method="post">
             <div class"form-group">
                 <label class="control-lable">Ditt namn</label>
                 <input class="form-control" asp-for="Booking.Booker" />
@@ -37,3 +37,7 @@
 <div>
     <a asp-action="Index">Tillbaka till listan</a>
 </div>
+
+@section Scripts{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial.cshtml"); }
+}
