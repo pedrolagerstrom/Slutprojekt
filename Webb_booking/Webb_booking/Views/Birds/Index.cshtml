@@ -18,7 +18,7 @@
                 Namn
             </th>
             <th>
-                Pris/dag
+                Pris/timme
             </th>
             <th>
                 
@@ -31,7 +31,7 @@
         <tr>
             <td>@bird.Species</td>
             <td>@bird.Name</td>
-            <td>@bird.Price</td>
+            <td>@bird.Price kr</td>
             <td>
                 <a asp-action="Edit" asp-route-id="@bird.Id">Ändra</a>
                 <a asp-action="Delete" asp-route-id="@bird.Id">Ta bort</a>

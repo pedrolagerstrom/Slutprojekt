@@ -23,15 +23,13 @@ namespace Webb_booking.Models
 
         private static void Seed()
         {
-            var bird1 = new Bird() { Id = Guid.NewGuid(), Species = "Grönvingad ara", Name = "Sir Talkalot", Price = 5000 };
-            var bird2 = new Bird() { Id = Guid.NewGuid(), Species = "Undulat", Name = "Papa Jon", Price = 2000 };
-            var bird3 = new Bird() { Id = Guid.NewGuid(), Species = "Nymfkakadua", Name = "Wendy", Price = 3000 };
+            var bird1 = new Bird() { Id = Guid.NewGuid(), Species = "Grönvingad ara", Name = "Sir Talkalot", Price = 50 };
+            var bird2 = new Bird() { Id = Guid.NewGuid(), Species = "Undulat", Name = "Papa Jon", Price = 20 };
+            var bird3 = new Bird() { Id = Guid.NewGuid(), Species = "Nymfkakadua", Name = "Wendy", Price = 30 };
 
             Birds.Add(bird1);
             Birds.Add(bird2);
             Birds.Add(bird3);
-
-
         }
     }
 }

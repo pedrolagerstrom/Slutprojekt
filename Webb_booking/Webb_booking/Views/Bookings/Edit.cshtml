@@ -9,20 +9,24 @@
             <div class"form-group">
                 <label class="control-lable">Ditt namn</label>
                 <input class="form-control" asp-for="Booking.Booker" />
+                <span asp-validation-for="Booking.Booker" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label class="control-lable">Fågel</label>
                 <select class="form-control" asp-for="Booking.BirdId" asp-items="@(new SelectList(Model.Birds, "Id", "Name"))">
                     <option>Välj fågel</option>
                 </select>
+                <span asp-validation-for="Booking.BirdId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label class="control-label">Från</label>
-                <input class="form-control" asp-for="Booking.From" />
+                <input class="form-control" asp-for="Booking.StartDate" />
+                <span asp-validation-for="Booking.StartDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label class="control-label">Till</label>
-                <input class="form-control" asp-for="Booking.To" />
+                <input class="form-control" asp-for="Booking.EndDate" />
+                <span asp-validation-for="Booking.EndDate" class="text-danger"></span>
             </div>
             <div>
                 <input class="btn btn-primary" type="submit" value="Spara" />

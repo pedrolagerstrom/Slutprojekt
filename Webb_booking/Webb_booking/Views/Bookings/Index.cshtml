@@ -10,17 +10,20 @@
     <thead>
         <tr>
             <th>
-                Namn
+                Namn på den som bokat
             </th>
             <th>
-                Fågel
+                Art
+            </th>
+            <th>
+                Namn på fågel
             </th>
             <th>
                 Från
             </th>
             <th>
                 Till
-            </th>
+            </th>            
             <th>
 
             </th>
@@ -31,9 +34,11 @@
         {
             <tr>
                 <td>@booking.Booker</td>
+                <td>@booking.Species</td>
                 <td>@booking.BirdName</td>
-                <td>@booking.From</td>
-                <td>@booking.To</td>
+                <td>@booking.StartDate</td>
+                <td>@booking.EndDate</td>
+                
                 <td>
                     <a asp-action="Edit" asp-route-id="@booking.Id">Ändra</a>
                     <a asp-action="Delete" asp-route-id="@booking.Id">Ta bort</a>

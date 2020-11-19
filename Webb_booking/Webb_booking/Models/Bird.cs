@@ -11,17 +11,17 @@ namespace Webb_booking.Models
     {
         public Guid Id { get; set; }
 
-        [Required]
-        [StringLength(30)]
+        [Required(ErrorMessage = "Fältet kan inte lämnas tomt.")]
+        [StringLength(30, ErrorMessage = "Art kan inte innehålla mer än 30 karaktärer")]
         public string Species { get; set; }
 
-        [Required]
-        [StringLength(30)]
+        [Required(ErrorMessage = "Fältet kan inte lämnas tomt.")]
+        [StringLength(30, ErrorMessage = "Namn kan inte innehålla mer än 30 karaktärer")]
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Fältet kan inte lämnas tomt.")]
         public int Price { get; set; }
 
-        public byte Image { get; set; }
+        public byte[] Image { get; set; }
     }
 }

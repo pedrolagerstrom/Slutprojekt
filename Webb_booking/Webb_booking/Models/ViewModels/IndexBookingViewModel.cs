@@ -6,29 +6,27 @@ using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Webb_booking.Models
+namespace Webb_booking.Models.ViewModels
 {
-    public class Booking
+    public class IndexBookingViewModel
     {
         public Guid Id { get; set; }
 
-        [Required(ErrorMessage = "Fältet kan inte lämnas tomt.")]
-        [StringLength(30)]
+        
         public string Booker { get; set; }
 
-        [Required(ErrorMessage = "Fältet kan inte lämnas tomt.")]
+        
         public Guid BirdId { get; set; }
 
-        [Required(ErrorMessage = "Fältet kan inte lämnas tomt.")]
+        
         public string BirdName { get; set; }
 
-        [Required(ErrorMessage = "Välj ett datum.")]
+        
         public DateTime StartDate { get; set; }
 
-        [Required(ErrorMessage = "Välj ett datum.")]
+        
         public DateTime EndDate { get; set; }
 
-        public string Species { get; set; }
-
+        public int TotalPrice { get; set; }
     }
 }
